@@ -25,20 +25,26 @@ router.register(r'workout-suggestions', WorkoutSuggestionViewSet, basename='work
 router.register(r'achievements', AchievementViewSet, basename='achievement')
 
 
+
 class APIRoot(APIView):
     """API root endpoint."""
     def get(self, request):
+        codespace_name = os.environ.get('CODESPACE_NAME')
+        if codespace_name:
+            base_url = f"https://{codespace_name}-8000.app.github.dev"
+        else:
+            base_url = request.build_absolute_uri('').rstrip('/')
         return Response({
             'message': 'Welcome to OctoFit Tracker API',
             'version': '1.0.0',
             'endpoints': {
-                'profiles': request.build_absolute_uri('/api/profiles/'),
-                'activities': request.build_absolute_uri('/api/activities/'),
-                'teams': request.build_absolute_uri('/api/teams/'),
-                'leaderboards': request.build_absolute_uri('/api/leaderboards/'),
-                'workout-suggestions': request.build_absolute_uri('/api/workout-suggestions/'),
-                'achievements': request.build_absolute_uri('/api/achievements/'),
-                'admin': request.build_absolute_uri('/admin/'),
+                'profiles': f"{base_url}/api/profiles/",
+                'activities': f"{base_url}/api/activities/",
+                'teams': f"{base_url}/api/teams/",
+                'leaderboards': f"{base_url}/api/leaderboards/",
+                'workout-suggestions': f"{base_url}/api/workout-suggestions/",
+                'achievements': f"{base_url}/api/achievements/",
+                'admin': f"{base_url}/admin/",
             }
         })
 
