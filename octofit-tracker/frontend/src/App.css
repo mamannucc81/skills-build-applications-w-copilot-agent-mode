@@ -1,0 +1,115 @@
+
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  color: #1a237e;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%) !important;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1);
+}
+.navbar .navbar-brand, .navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.navbar .nav-link.active {
+  color: #ffd600 !important;
+}
+
+.App-logo {
+  height: 48px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+h2, .display-6 {
+  color: #1976d2;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.07);
+}
+.table-primary th {
+  background: #1976d2 !important;
+  color: #fff;
+}
+.table-success th {
+  background: #43a047 !important;
+  color: #fff;
+}
+.table-info th {
+  background: #0288d1 !important;
+  color: #fff;
+}
+.table-warning th {
+  background: #fbc02d !important;
+  color: #fff;
+}
+.table-danger th {
+  background: #d32f2f !important;
+  color: #fff;
+}
+
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+  border-radius: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.07);
+}
+.btn-primary {
+  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
+  border: none;
+}
+.btn-success {
+  background: linear-gradient(90deg, #43a047 0%, #66bb6a 100%);
+  border: none;
+}
+.btn-info {
+  background: linear-gradient(90deg, #0288d1 0%, #26c6da 100%);
+  border: none;
+}
+.btn-warning {
+  background: linear-gradient(90deg, #fbc02d 0%, #ffd600 100%);
+  border: none;
+  color: #333;
+}
+.btn-danger {
+  background: linear-gradient(90deg, #d32f2f 0%, #e57373 100%);
+  border: none;
+}
+
+a, .App-link {
+  color: #1976d2;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover, .App-link:hover {
+  color: #ffd600;
+}
+
+.card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.07);
+}
+
+/* Favicon and logo animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
